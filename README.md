@@ -4,13 +4,20 @@ This material is prepared to emulate a real scenario where multiple developers a
 
 ## Setup your machine
 
-1. Docker:
+1. Docker: 
+
 `https://www.docker.com/get-started`
-2. VS Code:
-`https://code.visualstudio.com/`
-3. NodeJS:
-`https://nodejs.org/en/`
-4. Git:
+
+2. VS Code:<br/>
+
+`https://code.visualstudio.com/`<br/>
+
+3. NodeJS:<br/>
+
+`https://nodejs.org/en/`<br/>
+
+4. Git:<br/>
+
 `https://git-scm.com/`
 
 
@@ -18,5 +25,6 @@ This material is prepared to emulate a real scenario where multiple developers a
 
 A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
-
-![fork gif](https://raw.githubusercontent.com/billpereira/RTE-2019-Agenda-App/master/img/fork.gif)
+<div align="center">
+<img src="https://raw.githubusercontent.com/billpereira/RTE-2019-Agenda-App/master/img/fork.gif"/>
+</div>
