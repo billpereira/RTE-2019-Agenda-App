@@ -19,4 +19,4 @@ This material is prepared to emulate a real scenario where multiple developers a
 A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
 
-![fork gif](https://github.com/billpereira/RTE-2019-Agenga-App/img/fork.gif)
+![fork gif](https://raw.githubusercontent.com/billpereira/RTE-2019-Agenda-App/master/img/fork.gif)
