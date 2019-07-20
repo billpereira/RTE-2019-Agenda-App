@@ -4,12 +4,19 @@ This material is prepared to emulate a real scenario where multiple developers a
 
 ## Setup your machine
 
-Docker:
+1. Docker:
 `https://www.docker.com/get-started`
-VS Code:
+2. VS Code:
 `https://code.visualstudio.com/`
-NodeJS:
+3. NodeJS:
 `https://nodejs.org/en/`
-Git:
+4. Git:
 `https://git-scm.com/`
 
+
+## Fork, clone and branch
+
+A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+
+
+![fork gif](https://github.com/billpereira/RTE-2019-Agenga-App/img/fork.gif)
