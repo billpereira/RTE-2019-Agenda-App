@@ -1,4 +1,4 @@
-.session-time {
+.session-time, .timer-hide {
   display: block;
   position: absolute;
   z-index: 9990;
@@ -13,8 +13,7 @@
   font-size: $font-small;
 }
 
-
-.session-card {
+.session-card, .blank-card {
   display: flex;
   align-items: center;
   align-content: center;
@@ -32,6 +31,12 @@
 
 
 }
+.blank-card {
+  color: transparent;
+  border: 2px solid transparent;
+  background-color: transparent;
+}
+
 
 .card-active {
   background: $dark-orange;
@@ -43,4 +48,8 @@
 .timer-off {
   background: $timer-orange;
   border: 1px solid $timer-orange;
+}
+.timer-hide {
+  background: transparent;
+  border: 1px solid transparent;
 }
