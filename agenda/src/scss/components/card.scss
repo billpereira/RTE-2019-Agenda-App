@@ -1,0 +1,46 @@
+.session-time {
+  display: block;
+  position: absolute;
+  z-index: 9990;
+  padding: 5px;
+  border: 1px solid $orange;
+  background: $orange;
+  color: $dark-blue;
+  width: 80px;
+  margin-left: -250px;
+  // margin-bottom: -55px;
+  margin-top: 0px;
+  font-size: $font-small;
+}
+
+
+.session-card {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  color: $dark-orange;
+  border: 2px solid $dark-orange;
+  outline: 0;
+  max-width: 500px;
+  height: 80px;
+  background-color: transparent;
+  font-size: $font-medium;
+  margin: 0;
+  font-weight: 300;
+
+
+}
+
+.card-active {
+  background: $dark-orange;
+  color: $orange;
+  border: 2px solid $orange;
+
+}
+
+.timer-off {
+  background: $timer-orange;
+  border: 1px solid $timer-orange;
+}

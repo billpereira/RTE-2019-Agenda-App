@@ -1,0 +1,19 @@
+
+.select-box {
+  flex: 1;
+  width: 400px;
+  color: $orange;
+  border: 2px solid $orange;
+  outline: 0;
+  max-width: 400px;
+  height: 60px;
+  background-color: transparent;
+  text-align-last: center;
+  text-transform: uppercase;
+  font-size: $font-big;
+  border-radius: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  margin-top: 40px;
+}

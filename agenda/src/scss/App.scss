@@ -1,0 +1,39 @@
+@import './token';
+@import './components/select-box.scss';
+@import './components/card.scss';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  border: 0 solid $orange;
+  width: 80%;
+  margin-left: 10%;
+  padding:10px 0;
+  height: 100vh;
+}
+
+body {
+  color:$orange;
+  background-image:
+    radial-gradient(
+      circle at top right,
+      $dark-blue,
+      $light-blue
+    );
+}
+
+button {
+  font-size: $font-big;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: $orange;
+  outline: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: auto;
+}
