@@ -2,23 +2,28 @@
 
 This material is prepared to emulate a real scenario where multiple developers are working in a cloud environment, using docker, ibm toolchain and travis ci, to implement maintenance with continuous delivery
 
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/agenda.gif?raw=true"/>
+</div>
+
+
 ## Setup your machine
 
 1. Docker: 
 
-⋅⋅⋅ `https://www.docker.com/get-started`
+> https://www.docker.com/get-started
 
 2. VS Code:
 
-⋅⋅⋅ `https://code.visualstudio.com/`
+> https://code.visualstudio.com/
 
 3. NodeJS:
 
-⋅⋅⋅ `https://nodejs.org/en/`
+> https://nodejs.org/en/
 
 4. Git:
 
-⋅⋅⋅ `https://git-scm.com/`
+> https://git-scm.com/
 
 
 ## Fork, clone and branch
@@ -40,6 +45,8 @@ Go to your forked repository, copy the SSH or HTTPS URL and in your terminal run
 ```
 $ git clone [your fork SSH/HTTPS]
 $ cd RTE-2019-Agenda-App
-
 ```
 
+### Let's build our container
+
+Inside agenda folder we are goint to create our **Dockerfile**
