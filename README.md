@@ -33,6 +33,7 @@ This material is prepared to emulate a real scenario where multiple developers a
 
 
 
+
 ## Fork, clone and branch
 
 A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
@@ -172,14 +173,82 @@ Click the + next to My Repositories to enable Travis CI to build the new reposit
 
 ### Time for IBM Cloud
 
-Sign up on:
-
-> https://cloud.ibm.com/registration
-
 Before we can deploy our application, lets create Kubernetes service for our app.
 
+So through the cli let's first log on the **IBM Cloud** with your credentials
 
+`ibmcloud login -a https://cloud.ibm.com`
 
-Once logged we gonna search on the catalog for Toolchain
+Install the IBM Cloud Kubernetes Service plug-in
+
+`ibmcloud plugin install container-service -r "IBM Cloud"`
+
+Install the Container Registry plug-in.
+
+`ibmcloud plugin install container-registry -r "IBM Cloud"`
+Create the cluster, specifying the name of cluster.
+
+`ibmcloud cs cluster-create --name <cluster name>`
+To see the progress of your cluster creation, use the following command.
+
+`ibmcloud cs clusters`
+
+**Note: The process to create the cluster might take a long time. As the cluster is created, it progresses through these stages: Deploying, Pending, and Ready.**
+
+Create the API key, using the string provided for your key name.
+
+`ibmcloud iam api-key-create <my api key name>`
+Save the API key value that is output by the command.
+
+Now let's use the UI to define implement our pipeline. On the **catalog** search for **toolchain**.
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/toolchain.jpeg?raw=true"/>
+</div>
+
+Let's create our own toolchain
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/ownToolchain.jpeg?raw=true"/>
+</div>
+
+You can keep customize our keep the default info gor your tool chain, and then click create.
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/newToolchain.jpeg?raw=true"/>
+</div>
+
+On our toolchain we need to connect our github repository for the toolchain to monitor the master branch.
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/ownToolchain.jpg?raw=true"/>
+</div>
+
+Now on top right click on **Add a Tool**. Look for GitHub.
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/github.jpg?raw=true"/>
+</div>
+
+To create integration, we gonna choose Repository type: Existing, and provide Repository URL our github repository URL and click Create Integration (If requested authorize the access to your github account.):
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/gitintegra.jpg?raw=true"/>
+</div>
+
+Now let's add the delivery pipeline.
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/delivery.jpg?raw=true"/>
+</div>
+
+For our delivery we need to add a job for build, and deploy, everythime there is a change on the master branch.
+
+On this step you should have the following tools:
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/checktool.jpg?raw=true"/>
+</div>
+
 
 
