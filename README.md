@@ -242,7 +242,6 @@ Now let's add the delivery pipeline.
 <img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/delivery.jpg?raw=true"/>
 </div>
 
-For our delivery we need to add a job for build, and deploy, everythime there is a change on the master branch.
 
 On this step you should have the following tools:
 
@@ -250,5 +249,65 @@ On this step you should have the following tools:
 <img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/checktool.jpg?raw=true"/>
 </div>
 
+**For our delivery we need to add a job for build, and deploy, everythime there is a change on the master branch.**
 
 
+Click the Add Stage button.
+
+Name it Build.
+
+The options for the INPUT tab should be correct by default, but we’ll list them here for completeness:
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/build1.jpg?raw=true"/>
+</div>
+
+Ensure the Run jobs whenever a change is pushed to Git radio button is selected.
+
+Select the JOBS tab
+
+Click Add Job and select Build as the job type.
+
+Select Container Registry as the Builder type.
+
+Under the API key field, add your newly generated API key from the previous section.
+
+Ensure the Container Registry namespace is set to sampleapps that we created earlier.
+
+Update the “Docker image name to sampledocker
+
+Ensure the Stop running this stage if this job fails is selected also.
+
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/build2.jpg?raw=true"/>
+</div>
+
+Add a Deploy stage
+Click the Add Stage button.
+
+Name it Deploy.
+
+Select the INPUT tab
+
+The options for the INPUT tab should be correct by default, but we’ll list them here for completeness:
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/deploy1.jpg?raw=true"/>
+</div>
+
+Ensure the Run jobs when previous stage is complete radio button is selected.
+
+Select the JOBS tab
+
+Click Add Job and select Deploy as the job type.
+
+Select Kubernetes as the Deployer type.
+
+Select the appropriate IBM Cloud region, API key, and Cluster name where application will be deployed.
+
+<div align="center">
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/deploy2.jpg?raw=true"/>
+</div>
+
+Now everytime we make a change on our master branch our app is updated and we were able to create a complete continuous delivery cycle.
