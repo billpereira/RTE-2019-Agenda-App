@@ -25,6 +25,13 @@ This material is prepared to emulate a real scenario where multiple developers a
 
 > https://git-scm.com/
 
+5. IBM Cloud CLI
+
+> https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started
+
+> https://cloud.ibm.com/registration
+
+
 
 ## Fork, clone and branch
 
@@ -152,3 +159,27 @@ FROM nginx
 EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 ```
+
+### Add your repository to Travis CI
+
+To start, log on Travis using your github account on:
+
+> https://travis-ci.org/
+
+Click the + next to My Repositories to enable Travis CI to build the new repository.
+
+
+
+### Time for IBM Cloud
+
+Sign up on:
+
+> https://cloud.ibm.com/registration
+
+Before we can deploy our application, lets create Kubernetes service for our app.
+
+
+
+Once logged we gonna search on the catalog for Toolchain
+
+
