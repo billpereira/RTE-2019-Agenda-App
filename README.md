@@ -185,7 +185,7 @@ before_install:
 script:
   - docker run -e CI=true billpereira/rte-2019-agenda-app npm run test -- --coverage
 ```
-
+With this file when we push it to our git, travis will automatically start 
 
 
 ## 5. Time for IBM Cloud
