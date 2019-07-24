@@ -7,25 +7,25 @@ This material is prepared to emulate a real scenario where multiple developers a
 </div>
 
 
-## Setup your machine
+## 1. Setup your machine
 
-1. Docker: 
+* Docker: 
 
 > https://www.docker.com/get-started
 
-2. VS Code:
+* VS Code:
 
 > https://code.visualstudio.com/
 
-3. NodeJS:
+* NodeJS:
 
 > https://nodejs.org/en/
 
-4. Git:
+* Git:
 
 > https://git-scm.com/
 
-5. IBM Cloud CLI
+* IBM Cloud CLI
 
 > https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started
 
@@ -34,7 +34,7 @@ This material is prepared to emulate a real scenario where multiple developers a
 
 
 
-## Fork, clone and branch
+## 2. Fork, clone and branch
 
 A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
@@ -55,7 +55,7 @@ $ git clone [your fork SSH/HTTPS]
 $ cd RTE-2019-Agenda-App
 ```
 
-### Let's build our container
+## 3. Let's build our container
 
 First let's take a look in how does work Docker.
 
@@ -161,7 +161,7 @@ EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 ```
 
-### Add your repository to Travis CI
+## 4. Continuous Integration with Travis CI
 
 To start, log on Travis using your github account on:
 
@@ -169,9 +169,13 @@ To start, log on Travis using your github account on:
 
 Click the + next to My Repositories to enable Travis CI to build the new repository.
 
+Find your repo and click on the toogle to enable Travis.
+
+Now let's build our **travis.yml**
 
 
-### Time for IBM Cloud
+
+## 5. Time for IBM Cloud
 
 Before we can deploy our application, lets create Kubernetes service for our app.
 
@@ -209,7 +213,7 @@ Now let's use the UI to define implement our pipeline. On the **catalog** search
 Let's create our own toolchain
 
 <div align="center">
-<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/ownToolchain.jpeg?raw=true"/>
+<img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/ownToolchain.jpg?raw=true"/>
 </div>
 
 You can keep customize our keep the default info gor your tool chain, and then click create.
@@ -230,7 +234,7 @@ Now on top right click on **Add a Tool**. Look for GitHub.
 <img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/github.jpg?raw=true"/>
 </div>
 
-To create integration, we gonna choose Repository type: Existing, and provide Repository URL our github repository URL and click Create Integration (If requested authorize the access to your github account.):
+To create integration, we gonna choose Repository type: Existing, and provide Repository URL our github repository URL and click Create Integration (If requested authorize the access to your github account).
 
 <div align="center">
 <img src="https://github.com/billpereira/RTE-2019-Agenda-App/blob/master/img/gitintegra.jpg?raw=true"/>
@@ -311,3 +315,5 @@ Select the appropriate IBM Cloud region, API key, and Cluster name where applica
 </div>
 
 Now everytime we make a change on our master branch our app is updated and we were able to create a complete continuous delivery cycle.
+
+> https://developer.ibm.com/tutorials/custom-toolchain-with-devops/
