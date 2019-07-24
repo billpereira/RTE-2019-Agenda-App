@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - cd agenda
+  - docker build -t billpereira/rte-2019-agenda-app -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true billpereira/rte-2019-agenda-app npm run test -- --coverage
