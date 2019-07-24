@@ -173,6 +173,19 @@ Find your repo and click on the toogle to enable Travis.
 
 Now let's build our **travis.yml**
 
+```yml
+sudo: required
+services:
+  - docker
+
+before_install:
+  - cd agenda
+  - docker build -t billpereira/rte-2019-agenda-app -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true billpereira/rte-2019-agenda-app npm run test -- --coverage
+```
+With this file when we push it to our git, travis will automatically start 
 
 
 ## 5. Time for IBM Cloud
