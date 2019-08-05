@@ -110,7 +110,7 @@ CMD ["npm","start"]
 Before we can run our container we need to build our image with the following command:
 ``docker build -t billpereira/rte-agenda-app``
 
-Then we can run it, but remember with namespaces all set of resources it needs are 'isolated', so we need to expose the port were we are running
+Then we can run it, but remember with namespaces all set of resources it needs are 'isolated', so we need to expose the port we are running
 ``docker run -p 3000:3000 billpereira/rte-agenda-app``
 
 If you change something on your app, you will see that docker doesn't update it content automatically like when you are coding on your machine.
