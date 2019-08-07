@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - cd agenda
+  - docker build -t karinar0/rte-2019-agenda-app -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true karinar0/rte-2019-agenda-app npm run test -- --coverage
